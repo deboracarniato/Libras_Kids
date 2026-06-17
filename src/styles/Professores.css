@@ -1,0 +1,97 @@
+.professores-page {
+  padding: 2rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.professores-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  border: 2px dashed #00CEC9;
+}
+
+.professores-header h2 {
+  font-size: 2.8rem;
+  color: #00CEC9;
+  margin-bottom: 0.5rem;
+}
+
+.professores-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.professores-content {
+  background-color: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.prof-section h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.prof-section p, .prof-section ul {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.prof-section ul {
+  padding-left: 1.5rem;
+}
+
+.prof-section li {
+  margin-bottom: 0.8rem;
+}
+
+.prof-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f7fff7;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 5px solid var(--secondary);
+}
+
+.info-card h4 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.info-card p {
+  color: #555;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.highlight-section {
+  background-color: #fdf5e6;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px dashed #FF9F43;
+}
+
+.highlight-section h3 {
+  color: #FF9F43;
+  border-bottom: none;
+}

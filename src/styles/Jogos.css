@@ -1,0 +1,87 @@
+.jogos-page {
+  padding: 2rem 0;
+}
+
+.jogos-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  border: 2px dashed #FF9F43;
+}
+
+.jogos-header h2 {
+  font-size: 2.8rem;
+  color: #FF9F43;
+  margin-bottom: 0.5rem;
+}
+
+.jogos-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.jogos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.jogo-card {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.jogo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.jogo-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.jogo-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.jogo-content h3 {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.jogo-content p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.btn-jogar {
+  text-align: center;
+  padding: 0.8rem;
+  background-color: #1dd1a1;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-jogar:hover {
+  background-color: #10ac84;
+  transform: scale(1.02);
+}

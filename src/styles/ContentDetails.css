@@ -1,0 +1,121 @@
+.details-page {
+  background-color: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  border: 2px solid var(--accent);
+}
+
+.details-error {
+  text-align: center;
+  padding: 4rem;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.btn-back {
+  display: inline-block;
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s;
+}
+
+.btn-back:hover {
+  transform: translateX(-5px);
+}
+
+.details-header {
+  border-bottom: 2px dashed #eee;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.details-badge {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.details-header h2 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.age-group-large {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.details-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.details-section h3 {
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.details-section p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.objective-section {
+  background-color: #f7fff7;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 5px solid var(--secondary);
+}
+
+.instructions-text {
+  white-space: pre-wrap;
+}
+
+.details-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px dashed #eee;
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn-play {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.btn-download {
+  background-color: var(--primary);
+  color: white;
+}
