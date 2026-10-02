@@ -7,10 +7,10 @@ export default function Header() {
     <header className="main-header">
       <div className="header-content">
         <Link to="/" className="logo">
-          <div className="logo-icon">✌️</div>
+          <div className="logo-icon">🤟</div>
           <div className="logo-text">
             <h1>LibrasKids</h1>
-            <span>Biblioteca Interativa de Libras para Crianças</span>
+            <span>Uma viagem pelo mundo da Libras</span>
           </div>
         </Link>
         <nav className="main-nav">
