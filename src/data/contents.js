@@ -9,7 +9,7 @@ export const contents = [
     ageGroup: '4 a 7 anos',
     instructions: '1. Assista aos vídeos de cada letra.\n2. Tente imitar o sinal com as mãos.\n3. Faça o jogo da memória para testar seus conhecimentos!',
     playOnlineUrl: '/jogos/alfabeto-magico',
-    downloadUrl: '/downloads/alfabeto-cartilhas.pdf'
+    downloadUrl: import.meta.env.BASE_URL + 'downloads/alfabeto-cartilhas.pdf'
   },
   {
     id: 'numeros-coloridos',
@@ -33,7 +33,7 @@ export const contents = [
     ageGroup: '5 a 8 anos',
     instructions: '1. Assista à historinha da fazenda.\n2. Pratique os sinais com seus pais ou professores.\n3. Baixe o material para colorir!',
     playOnlineUrl: null,
-    downloadUrl: '/downloads/animais-fazenda-colorir.pdf'
+    downloadUrl: import.meta.env.BASE_URL + 'downloads/animais-fazenda-colorir.pdf'
   },
   {
     id: 'minha-familia',
@@ -45,7 +45,7 @@ export const contents = [
     ageGroup: '4 a 8 anos',
     instructions: '1. Aprenda o sinal de cada membro da família.\n2. Tente apresentar sua família para um amigo usando Libras.\n3. Baixe a árvore genealógica.',
     playOnlineUrl: '/jogos/minha-familia',
-    downloadUrl: '/downloads/arvore-genealogica-libras.pdf'
+    downloadUrl: import.meta.env.BASE_URL + 'downloads/arvore-genealogica-libras.pdf'
   },
   {
     id: 'sentimentos-divertidos',
