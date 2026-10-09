@@ -12,7 +12,7 @@ export default function Footer() {
         
         <div className="footer-links">
           <div className="footer-col">
-            <div className="col-icon">🤍</div>
+            <div className="col-icon">💗</div>
             <p>Feito com amor pelos alunos Debora e Matheus!</p>
           </div>
           <div className="footer-col">

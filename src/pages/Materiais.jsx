@@ -5,8 +5,8 @@ export default function Materiais() {
   const materiais = [
     {
       id: 1,
-      title: 'Apostila Básica de Libras Kids',
-      description: 'Uma apostila completa com as lições iniciais de alfabeto, cores e números, cheia de desenhos para colorir.',
+      title: 'Asquelzinho e Debinha: Uma Viagem Pelo Mundo da Libras',
+      description: 'Uma apostila completa com as lições iniciais de alfabeto, cores e números para professores apresentarem o mundo da Libras para as crianças!',
       category: 'Iniciante',
       type: 'Apostila',
       link: '#'
