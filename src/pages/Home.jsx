@@ -145,7 +145,7 @@ export default function Home() {
           <Link to="/biblioteca" className="learn-card">
             <div className="learn-icon">🎥</div>
             <h4>Vídeos</h4>
-            <p>Assista em Libras</p>
+            <p>Aprenda sinais em Libras</p>
           </Link>
         </div>
       </section>

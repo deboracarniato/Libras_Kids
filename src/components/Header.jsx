@@ -21,12 +21,6 @@ export default function Header() {
           <NavLink to="/professores">Para Professores</NavLink>
           <NavLink to="/sobre">Sobre o Projeto</NavLink>
         </nav>
-        <div className="header-actions">
-          <div className="search-bar">
-            <span>🔍 Buscar</span>
-          </div>
-          <button className="btn-login">👤 Entrar</button>
-        </div>
       </div>
     </header>
   );

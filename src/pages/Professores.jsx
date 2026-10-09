@@ -16,7 +16,7 @@ export default function Professores() {
         </section>
 
         <section className="prof-section">
-          <h3>✨ Sugestões de atividades</h3>
+          <h3>Sugestões de atividades</h3>
           <ul>
             <li><strong>Roda de Sinais:</strong> Crianças se reúnem em círculo e cada uma ensina o sinal de um animal para a turma.</li>
             <li><strong>Caça ao Tesouro:</strong> Esconda as "Cartas de Emoções" pela sala. Ao achar uma carta, a criança faz a expressão facial e o sinal.</li>

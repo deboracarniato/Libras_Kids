@@ -17,20 +17,11 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <div className="col-icon">👨‍👩‍👧‍👦</div>
-            <p>Conteúdos criados por estudantes para apresentar o mundo da Libras para crianças.</p>
+            <p>Conteúdos criados por estudantes do Colégio Barbosa Ferraz para apresentar o mundo da Libras para crianças.</p>
           </div>
           <div className="footer-col">
             <div className="col-icon">🌐</div>
             <p>Um projeto escolar que fala com o mundo e quebra as barreiras da comunicação entre surdos e ouvintes!</p>
-          </div>
-          <div className="footer-col social-col">
-            <h4>Siga o projeto!</h4>
-            <div className="social-icons">
-              <span>📷</span>
-              <span>▶️</span>
-              <span>🎵</span>
-              <span>✉️</span>
-            </div>
           </div>
         </div>
       </div>
