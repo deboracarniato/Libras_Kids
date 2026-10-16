@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import '../styles/JogoMemoria.css';
+import '../styles/PagePlaceholder.css';
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const LEVELS = [
-  { id: 'facil', name: 'Começando', pairs: 5, letters: ['A', 'B', 'C', 'M', 'S'] },
+  { id: 'facil', name: 'Iniciante', pairs: 5, letters: ['A', 'B', 'C', 'M', 'S'] },
   { id: 'medio', name: 'Aventureiro', pairs: 10, letters: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'I', 'L', 'M'] },
-  { id: 'avancado', name: 'Desafio', pairs: 26, letters: ALPHABET },
+  { id: 'avancado', name: 'Desafiador', pairs: 26, letters: ALPHABET },
 ];
 const ROUND_SECONDS = 600;
 
@@ -70,7 +71,7 @@ function AlphabetView({ onBack }) {
   );
 }
 
-export default function JogoPlaceholder() {
+export function JogoMemoria() {
   const [levelId, setLevelId] = useState(LEVELS[0].id);
   const [cards, setCards] = useState([]);
   const [selected, setSelected] = useState([]);
@@ -167,7 +168,7 @@ export default function JogoPlaceholder() {
     <div className={`memory-game ${motionOn ? '' : 'memory-no-motion'}`}>
       <header className="memory-hero">
         <div className="memory-hero-copy">
-          <p className="memory-eyebrow">Um jogo para descobrir</p>
+          <p className="memory-eyebrow">Aprendendo o alfabeto</p>
           <h1>Memória <span>em Libras</span></h1>
           <p>Encontre as letras e seus sinais em Libras para aprender brincando!</p>
         </div>
@@ -288,5 +289,18 @@ export default function JogoPlaceholder() {
         </section>
       )}
     </div>
+  );
+}
+
+export default function JogoPlaceholder() {
+  const { id } = useParams();
+  const gameName = id?.replace(/-/g, ' ') ?? 'este jogo';
+
+  return (
+    <section className="placeholder-page">
+      <h2>Este jogo está chegando!</h2>
+      <p>Estamos preparando <strong>{gameName}</strong> para você. Enquanto isso, escolha outro jogo para se divertir.</p>
+      <Link to="/jogos" className="back-btn">Voltar para os jogos</Link>
+    </section>
   );
 }

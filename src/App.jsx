@@ -1,4 +1,3 @@
-import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -7,7 +6,7 @@ import Home from './pages/Home';
 import Biblioteca from './pages/Biblioteca';
 import ContentDetails from './pages/ContentDetails';
 import Jogos from './pages/Jogos';
-import JogoPlaceholder from './pages/JogoPlaceholder';
+import JogoPlaceholder, { JogoMemoria } from './pages/JogoPlaceholder';
 import Materiais from './pages/Materiais';
 import Professores from './pages/Professores';
 import Sobre from './pages/Sobre';
@@ -23,6 +22,7 @@ function App() {
             <Route path="/biblioteca" element={<Biblioteca />} />
             <Route path="/biblioteca/:id" element={<ContentDetails />} />
             <Route path="/jogos" element={<Jogos />} />
+            <Route path="/jogos/jogo-da-memoria" element={<JogoMemoria />} />
             <Route path="/jogos/:id" element={<JogoPlaceholder />} />
             <Route path="/materiais" element={<Materiais />} />
             <Route path="/professores" element={<Professores />} />
