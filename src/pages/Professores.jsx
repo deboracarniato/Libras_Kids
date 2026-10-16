@@ -11,7 +11,7 @@ export default function Professores() {
 
       <div className="professores-content">
         <section className="prof-section">
-          <h3>📘 Como usar o Libras Kids em sala</h3>
+          <h3>Como usar o Libras Kids em sala</h3>
           <p>O Libras Kids foi desenhado para ser uma ferramenta de apoio visual. Pode ser utilizado em lousas digitais para aulas conjuntas ou em tablets individuais. Recomendamos apresentar uma categoria por semana, estimulando a prática através das atividades diárias.</p>
         </section>
 
@@ -26,23 +26,23 @@ export default function Professores() {
 
         <div className="prof-cards">
           <div className="info-card">
-            <h4>⏱️ Tempo estimado</h4>
+            <h4>⏱Tempo estimado</h4>
             <p>15 a 20 minutos por atividade (ideal para manter o foco e engajamento).</p>
           </div>
           
           <div className="info-card">
-            <h4>👶 Faixa etária</h4>
-            <p>Atividades desenhadas especialmente para crianças da Educação Infantil e Séries Iniciais (3 a 9 anos).</p>
+            <h4>Faixa etária</h4>
+            <p>Atividades desenhadas especialmente para crianças da Educação Infantil e Séries Iniciais (4 a 9 anos).</p>
           </div>
         </div>
 
         <section className="prof-section highlight-section">
-          <h3>🎯 Objetivos de aprendizagem</h3>
+          <h3>Objetivos de aprendizagem</h3>
           <p>Nossa plataforma apoia o desenvolvimento motor, a memória visual e espacial, empatia, comunicação não-verbal e introdução à cultura surda, cumprindo competências transversais da BNCC.</p>
         </section>
 
         <section className="prof-section">
-          <h3>💡 Dicas para adaptar os jogos físicos e digitais</h3>
+          <h3>Dicas para adaptar os jogos físicos e digitais</h3>
           <p>Para crianças com necessidades especiais de coordenação, amplie os materiais impressos em formato A3. No uso digital, faça os jogos em duplas, promovendo cooperação, onde uma criança opera o dispositivo e a outra sinaliza junto.</p>
         </section>
       </div>
