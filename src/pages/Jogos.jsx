@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Jogos.css';
 
@@ -13,7 +12,7 @@ export default function Jogos() {
     {
       id: 'quiz-de-sinais',
       title: 'Quiz de Sinais',
-      description: 'Teste seus conhecimentos respondendo qual é a palavra correta para o sinal mostrado na tela.',
+      description: 'Descubra qual palavra corresponde à sequência de letras e teste seus conhecimentos!',
       imageUrl: 'https://placehold.co/300x200/4ECDC4/FFF?text=Quiz',
     },
     {
