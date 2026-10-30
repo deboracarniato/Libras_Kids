@@ -1,6 +1,29 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import imagemAbacaxi from '../../imagens/abacaxi.jpeg';
+import imagemBanana from '../../imagens/banana.jpeg';
+import imagemBola from '../../imagens/bola.jpeg';
+import imagemCasa from '../../imagens/casa.jpeg';
+import imagemEscola from '../../imagens/escola.jpeg';
+import imagemGato from '../../imagens/gato.jpeg';
+import imagemMaca from '../../imagens/maca.jpeg';
+import imagemMorango from '../../imagens/morango.jpeg';
+import imagemPato from '../../imagens/pato.jpeg';
+import imagemSapo from '../../imagens/sapo.jpeg';
 import '../styles/QuizDatilologia.css';
+
+const WORD_IMAGES = {
+  ABACAXI: imagemAbacaxi,
+  BANANA: imagemBanana,
+  BOLA: imagemBola,
+  CASA: imagemCasa,
+  ESCOLA: imagemEscola,
+  GATO: imagemGato,
+  MAÇÃ: imagemMaca,
+  MORANGO: imagemMorango,
+  PATO: imagemPato,
+  SAPO: imagemSapo,
+};
 
 const QUESTIONS = [
   { word: 'MORANGO', options: ['BANANA', 'MORANGO', 'MAÇÃ', 'ABACAXI'] },
@@ -74,9 +97,8 @@ export default function QuizDatilologia() {
           </div>
           <p className="spelling-eyebrow">Uma aventura de letras</p>
           <h1 id="spelling-title">Quiz de <span>Datilologia</span></h1>
-          <p className="spelling-intro-copy">Descubra qual palavra aparece na sequência de letras. São 10 perguntas e cada acerto vale 10 pontos!</p>
+          <p className="spelling-intro-copy">Observe a imagem e escolha a palavra correspondente. São 10 perguntas e cada acerto vale 10 pontos!</p>
           <button className="spelling-primary-button" type="button" onClick={startGame}>Jogar <span aria-hidden="true">→</span></button>
-          <p className="spelling-image-notice">As imagens validadas das configurações das mãos ainda não estão disponíveis neste projeto. A sequência mostrada durante o jogo é escrita, não uma representação dos sinais em Libras.</p>
         </section>
       )}
 
@@ -105,12 +127,14 @@ export default function QuizDatilologia() {
             <span style={{ width: `${((questionIndex + 1) / questions.length) * 100}%` }} />
           </div>
 
-          <div className="spelling-sequence" aria-label={`Sequência escrita: ${[...currentQuestion.word].join(', ')}`}>
-            {[...currentQuestion.word].map((letter, index) => (
-              <span className="spelling-letter-tile" key={`${letter}-${index}`} aria-hidden="true">{letter}</span>
-            ))}
+          <div className="spelling-sequence">
+            <img
+              className="spelling-word-image"
+              src={WORD_IMAGES[currentQuestion.word]}
+              alt={`Imagem de ${currentQuestion.word.toLocaleLowerCase('pt-BR')}`}
+            />
           </div>
-          <p className="spelling-sequence-caption">Sequência de letras</p>
+          <p className="spelling-sequence-caption">Escolha a palavra correspondente à imagem</p>
 
           <div className="spelling-options" role="group" aria-label="Escolha uma palavra">
             {currentQuestion.options.map((option, index) => {
