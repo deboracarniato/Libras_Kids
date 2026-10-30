@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import imagemAlfabeto from '../../imagens/alfabeto.Libras.Completo.jpeg';
 import '../styles/JogoMemoria.css';
 import '../styles/PagePlaceholder.css';
 
@@ -53,20 +54,11 @@ function AlphabetView({ onBack }) {
         </div>
         <button className="memory-secondary-button" type="button" onClick={onBack}>Voltar</button>
       </div>
-      <div className="memory-learning-grid">
-        {ALPHABET.map((letter) => (
-          <div className="memory-learning-letter" key={letter}>
-            <strong>{letter}</strong>
-            <span>Letra {letter}</span>
-            <small>Sinal visual ainda não cadastrado</small>
-          </div>
-        ))}
-      </div>
-      <p className="memory-learning-note">
-        Libras é uma língua visual-espacial completa. O alfabeto manual é um de seus recursos,
-        usado, por exemplo, para soletrar nomes próprios. As imagens dos sinais precisam ser
-        incluídas e conferidas em uma fonte educativa confiável antes de serem apresentadas.
-      </p>
+      <img
+        className="memory-learning-image"
+        src={imagemAlfabeto}
+        alt="Alfabeto completo em Libras"
+      />
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import imagemInicial from '../assets/imagem-inicial.png';
+import imagemInicial from '../../imagens/foto_tela_inicial_jpeg.jpeg';
 import '../styles/Home.css';
 
 export default function Home() {
