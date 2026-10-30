@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import imagemContandoLibras from '../../imagens/banana.jpeg';
 import '../styles/Jogos.css';
 
 export default function Jogos() {
@@ -18,7 +19,7 @@ export default function Jogos() {
     {
       id: 'ligue-corretamente',
       title: 'Ligue Corretamente',
-      description: 'Ligue as expressões faciais aos sentimentos corretos. Seja rápido!',
+      description: 'Ligue a quantidade de frutas ao seu número. Seja rápido!',
       imageUrl: 'https://placehold.co/300x200/FFE66D/2F3542?text=Ligue',
     },
     {

@@ -8,6 +8,7 @@ import ContentDetails from './pages/ContentDetails';
 import Jogos from './pages/Jogos';
 import JogoPlaceholder, { JogoMemoria } from './pages/JogoPlaceholder';
 import QuizDatilologia from './pages/QuizDatilologia';
+import ContandoLibras from './pages/ContandoLibras';
 import Materiais from './pages/Materiais';
 import Professores from './pages/Professores';
 import Sobre from './pages/Sobre';
@@ -25,6 +26,7 @@ function App() {
             <Route path="/jogos" element={<Jogos />} />
             <Route path="/jogos/jogo-da-memoria" element={<JogoMemoria />} />
             <Route path="/jogos/quiz-de-sinais" element={<QuizDatilologia />} />
+            <Route path="/jogos/ligue-corretamente" element={<ContandoLibras />} />
             <Route path="/jogos/:id" element={<JogoPlaceholder />} />
             <Route path="/materiais" element={<Materiais />} />
             <Route path="/professores" element={<Professores />} />

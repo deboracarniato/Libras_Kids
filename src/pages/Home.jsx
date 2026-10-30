@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import imagemInicial from '../../imagens/foto_tela_inicial_jpeg.jpeg';
 import '../styles/Home.css';
@@ -17,7 +16,7 @@ export default function Home() {
   const jogos = [
     { id: 'jogo-da-memoria', title: 'Jogo da Memória', subtitle: 'Alfabeto em Libras', color: '#EBE4FF', icon: '🎴' },
     { id: 'quiz-de-sinais', title: 'Quiz Libras', subtitle: 'Teste seus conhecimentos!', color: '#D3F9D8', icon: '❓' },
-    { id: 'ligue-corretamente', title: 'Ligue Corretamente', subtitle: 'Associe a imagem ao sinal', color: '#FFF3C4', icon: '🔗' },
+    { id: 'ligue-corretamente', title: 'Contando com Libras', subtitle: 'Associe sinais e quantidades', color: '#FFF3C4', icon: '🔗' },
     { id: 'arraste-e-solte', title: 'Arraste e Solte', subtitle: 'Monte a palavra em Libras', color: '#D6E4FF', icon: '👆' },
   ];
 

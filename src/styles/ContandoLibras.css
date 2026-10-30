@@ -1,0 +1,161 @@
+.counting-game {
+  --counting-ink: #3d3b31;
+  --counting-green: #25866b;
+  --counting-green-dark: #17684f;
+  --counting-white: #fffdf6;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 18px 24px 36px;
+  border-radius: 20px;
+  background: #ffe18a;
+  color: var(--counting-ink);
+}
+
+.counting-game button,
+.counting-game a { font: inherit; }
+.counting-game button:focus-visible,
+.counting-game a:focus-visible { outline: 4px solid #286bb1; outline-offset: 3px; }
+
+.counting-topline,
+.counting-round-header,
+.counting-section-heading,
+.counting-start-actions,
+.counting-result-actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.counting-topline { min-height: 38px; margin-bottom: 12px; }
+.counting-back-link { color: #454236; font-weight: 600; text-decoration: none; }
+.counting-back-link:hover { text-decoration: underline; }
+.counting-game-label { padding: 5px 12px; border: 1px solid #d2a832; border-radius: 999px; background: #fff4c9; font-size: 0.9rem; font-weight: 600; }
+.counting-eyebrow { margin-bottom: 7px; color: #79611f; font-size: 0.82rem; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+
+.counting-start { display: grid; min-height: 410px; grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: 24px; padding: 26px 4%; animation: counting-enter 420ms ease-out both; }
+.counting-start-copy { max-width: 600px; }
+.counting-start h1,
+.counting-learning h1,
+.counting-round h1,
+.counting-complete h1,
+.counting-result h1 { margin: 0; color: var(--counting-ink); font-size: 2.6rem; line-height: 1.12; }
+.counting-start h1 span { color: #a64b34; }
+.counting-start-copy > p:not(.counting-eyebrow):not(.counting-assets-note) { max-width: 460px; margin-top: 15px; font-size: 1.2rem; }
+.counting-start-actions { justify-content: flex-start; flex-wrap: wrap; margin-top: 25px; }
+.counting-primary-button,
+.counting-secondary-button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 18px; border: 2px solid transparent; border-radius: 10px; font-weight: 700; cursor: pointer; transition: transform 160ms ease, background-color 160ms ease; }
+.counting-primary-button { background: var(--counting-green); color: white; }
+.counting-primary-button:hover { transform: translateY(-2px); background: var(--counting-green-dark); }
+.counting-secondary-button { border-color: #786026; background: var(--counting-white); color: var(--counting-ink); }
+.counting-secondary-button:hover { transform: translateY(-2px); background: #fff6d8; }
+.counting-assets-note { margin-top: 17px; color: #675a37; font-size: 0.88rem; }
+.counting-fruit-preview { display: grid; width: min(100%, 380px); grid-template-columns: repeat(2, 1fr); justify-items: center; gap: 6px 12px; margin: auto; }
+.counting-preview-fruit { width: 125px; height: 125px; object-fit: contain; filter: drop-shadow(0 5px 3px #57441c25); }
+.counting-preview-fruit-1 { transform: rotate(-8deg); }
+.counting-preview-fruit-2 { transform: rotate(7deg); }
+.counting-preview-fruit-3 { transform: rotate(5deg); }
+.counting-preview-fruit-4 { transform: rotate(-6deg); }
+
+.counting-learning,
+.counting-round,
+.counting-complete,
+.counting-result { padding: 20px 2% 28px; animation: counting-enter 360ms ease-out both; }
+.counting-section-heading { align-items: flex-start; margin: 8px 0 20px; }
+.counting-chart-placeholder { min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; border: 2px dashed #9b7a30; border-radius: 12px; background: #fff7db; text-align: center; }
+.counting-chart-placeholder strong { font-size: 1.25rem; }
+.counting-chart-placeholder > span:last-child { color: #665c42; }
+.counting-chart-numbers { color: #25866b; font-size: 1.5rem; font-weight: 700; word-spacing: 4px; }
+.counting-number-chart { display: block; width: min(100%, 900px); max-height: 68vh; margin: 20px auto 0; object-fit: contain; animation: counting-enter 420ms ease-out both; }
+
+.counting-round-header { align-items: flex-end; margin-bottom: 16px; }
+.counting-round-header h1 { font-size: 2rem; }
+.counting-stats { display: flex; gap: 10px; }
+.counting-stats div { min-width: 92px; display: grid; gap: 1px; padding: 7px 12px; border: 1px solid #d6b44d; border-radius: 9px; background: #fff5cf; text-align: center; }
+.counting-stats span { color: #615635; font-size: 0.8rem; }
+.counting-stats strong { font-size: 1.2rem; }
+.counting-progress { height: 9px; overflow: hidden; margin-bottom: 15px; border-radius: 999px; background: #fff4c7; }
+.counting-progress span { display: block; height: 100%; border-radius: inherit; background: var(--counting-green); transition: width 250ms ease; }
+.counting-board { position: relative; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 18px; }
+.counting-connections { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.counting-connections line { stroke: #25866b; stroke-width: 5; stroke-linecap: round; opacity: 0.82; animation: counting-line-in 250ms ease-out both; }
+.counting-column { position: relative; z-index: 2; display: grid; grid-template-rows: auto repeat(5, minmax(104px, auto)); gap: 8px; }
+.counting-column h2 { align-self: end; padding: 0 4px 3px; color: #584a22; font-size: 1.08rem; }
+.counting-choice { position: relative; width: 100%; min-width: 0; min-height: 104px; display: flex; align-items: center; justify-content: center; padding: 8px; overflow: hidden; border: 2px solid #ddc778; border-radius: 10px; background: var(--counting-white); color: var(--counting-ink); cursor: pointer; transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease; }
+.counting-choice:hover:not(:disabled) { transform: translateY(-1px); border-color: var(--counting-green); }
+.counting-choice.is-selected { border-color: #286bb1; background: #eef6ff; box-shadow: 0 0 0 2px #286bb133; }
+.counting-choice.is-matched { border-color: #25866b; background: #e4f5e9; cursor: default; }
+.counting-choice.is-incorrect { border-color: #d65b4c; background: #fff0ec; animation: counting-shake 260ms ease-in-out; }
+.counting-choice:disabled { opacity: 1; }
+.counting-sign-placeholder { width: min(100%, 160px); min-height: 78px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border: 1px dashed #c3ad69; border-radius: 8px; background: #fff8df; }
+.counting-sign-placeholder strong { color: #6b5420; font-size: 1.9rem; line-height: 1.1; }
+.counting-sign-placeholder small { color: #72694f; font-size: 0.7rem; }
+.counting-sign-image { display: block; width: 100%; height: 92px; object-fit: contain; }
+.counting-fruit-choice { flex-direction: column; gap: 4px; }
+.counting-fruit-name { font-size: 0.86rem; font-weight: 700; line-height: 1.15; }
+.counting-fruit-quantity { width: min(100%, 230px); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); justify-items: center; gap: 2px; }
+.counting-fruit-image,
+.counting-fruit-slot { width: 28px; height: 28px; object-fit: contain; }
+.counting-fruit-image { filter: drop-shadow(0 1px 1px #463c2522); }
+.counting-fruit-slot { border: 1px dashed var(--fruit-slot-color); border-radius: 7px; background: color-mix(in srgb, var(--fruit-slot-color) 20%, white); }
+.counting-match-mark { position: absolute; top: 3px; right: 7px; color: #17684f; font-size: 1.1rem; font-weight: 700; }
+.counting-feedback { min-height: 34px; margin-top: 12px; color: #594d2a; font-weight: 600; text-align: center; }
+.counting-feedback.is-correct { color: #17684f; animation: counting-pop 250ms ease-out; }
+.counting-feedback.is-incorrect { color: #a43e30; }
+
+.counting-complete,
+.counting-result { max-width: 720px; margin: 18px auto 0; text-align: center; }
+.counting-complete-star { display: block; margin-bottom: 3px; color: #bd7b12; font-size: 3rem; animation: counting-star 900ms ease-in-out infinite alternate; }
+.counting-complete > p:not(.counting-eyebrow):not(.counting-auto-advance),
+.counting-result-message { margin: 9px 0 18px; font-size: 1.12rem; }
+.counting-phase-score { display: grid; width: min(100%, 330px); justify-items: center; gap: 4px; margin: 18px auto; padding: 16px; border-block: 1px solid #d2a832; }
+.counting-phase-score strong { color: var(--counting-green-dark); font-size: 2rem; }
+.counting-phase-score span:last-child { color: #675a37; }
+.counting-auto-advance { margin-top: 12px; color: #675a37; font-size: 0.82rem; }
+.counting-result-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 22px 0 12px; border-block: 1px solid #d2a832; }
+.counting-result-stats div { display: grid; gap: 4px; padding: 14px 8px; }
+.counting-result-stats div + div { border-left: 1px solid #d2a832; }
+.counting-result-stats span { color: #675a37; font-size: 0.88rem; }
+.counting-result-stats strong { color: var(--counting-green-dark); font-size: 1.45rem; }
+.counting-phase-results { color: #594d2a; font-size: 0.9rem; }
+.counting-result-actions { justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+
+@keyframes counting-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes counting-pop { 50% { transform: scale(1.04); } }
+@keyframes counting-line-in { from { opacity: 0; } to { opacity: 0.82; } }
+@keyframes counting-shake { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+@keyframes counting-star { to { transform: rotate(10deg) scale(1.08); } }
+
+@media (max-width: 700px) {
+  .counting-game { padding: 14px 14px 28px; border-radius: 13px; }
+  .counting-start { min-height: 0; grid-template-columns: 1fr; gap: 16px; padding: 20px 3% 12px; }
+  .counting-start h1,
+  .counting-learning h1,
+  .counting-result h1,
+  .counting-complete h1 { font-size: 2rem; }
+  .counting-fruit-preview { width: 245px; }
+  .counting-preview-fruit { width: 95px; height: 95px; }
+  .counting-round { padding-inline: 0; }
+  .counting-round-header { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .counting-round-header h1 { font-size: 1.65rem; }
+  .counting-stats { width: 100%; }
+  .counting-stats div { flex: 1; }
+  .counting-board { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 7px; }
+  .counting-column { grid-template-rows: auto repeat(5, minmax(112px, auto)); gap: 6px; }
+  .counting-column h2 { min-height: 38px; display: flex; align-items: end; font-size: 0.9rem; line-height: 1.1; }
+  .counting-choice { min-height: 112px; padding: 5px 3px; border-radius: 8px; }
+  .counting-sign-placeholder { min-height: 76px; }
+  .counting-sign-image { height: 90px; }
+  .counting-fruit-name { font-size: 0.76rem; }
+  .counting-fruit-quantity { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; }
+  .counting-fruit-image,
+  .counting-fruit-slot { width: 22px; height: 22px; }
+  .counting-chart-placeholder { min-height: 240px; padding: 16px; }
+  .counting-chart-numbers { font-size: 1rem; word-spacing: 1px; }
+  .counting-result-stats { grid-template-columns: 1fr; }
+  .counting-result-stats div { padding: 9px; }
+  .counting-result-stats div + div { border-top: 1px solid #d2a832; border-left: 0; }
+  .counting-section-heading { align-items: flex-start; flex-direction: column; }
+  .counting-result-actions { flex-direction: column; }
+  .counting-result-actions > * { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .counting-game *,
+  .counting-game *::before,
+  .counting-game *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
