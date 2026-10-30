@@ -5,6 +5,10 @@ import '../styles/JogoMemoria.css';
 import '../styles/PagePlaceholder.css';
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const SIGN_IMAGES = Object.fromEntries(ALPHABET.map((letter) => [
+  letter,
+  new URL(`../../imagens/letra${letter}.jpeg`, import.meta.url).href,
+]));
 const LEVELS = [
   { id: 'facil', name: 'Iniciante', pairs: 5, letters: ['A', 'B', 'C', 'M', 'S'] },
   { id: 'medio', name: 'Aventureiro', pairs: 10, letters: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'I', 'L', 'M'] },
@@ -32,16 +36,6 @@ function createCards(letters) {
     { id: `${letter}-letter`, letter, type: 'letter' },
     { id: `${letter}-sign`, letter, type: 'sign' },
   ]));
-}
-
-function SignPlaceholder({ letter }) {
-  return (
-    <span className="memory-sign-placeholder" aria-hidden="true">
-      <span className="memory-sign-label">IMAGEM PENDENTE</span>
-      <span className="memory-sign-letter">{letter}</span>
-      <span className="memory-sign-note">sinal da letra</span>
-    </span>
-  );
 }
 
 function AlphabetView({ onBack }) {
@@ -213,7 +207,6 @@ export function JogoMemoria() {
               <button className="memory-primary-button" type="button" onClick={startGame}>Começar a jogar</button>
             </div>
           </div>
-          <p className="memory-source-note">As cartas de sinal identificam a letra, mas ainda não exibem a configuração da mão: o projeto não possui imagens validadas do alfabeto manual.</p>
         </section>
       )}
 
@@ -237,7 +230,7 @@ export function JogoMemoria() {
               const isFaceUp = selected.includes(card.id) || matched.includes(card.letter);
               const label = card.type === 'letter'
                 ? `Letra ${card.letter}`
-                : `Imagem do sinal de Libras indisponível para a letra ${card.letter}`;
+                : `Sinal da letra ${card.letter}`;
               return (
                 <button
                   className={`memory-card ${isFaceUp ? 'is-face-up' : ''} ${matched.includes(card.letter) ? 'is-matched' : ''} ${card.type === 'sign' ? 'is-sign-card' : ''}`}
@@ -251,7 +244,7 @@ export function JogoMemoria() {
                 >
                   <span className="memory-card-back" aria-hidden={isFaceUp}>?</span>
                   <span className="memory-card-front" aria-hidden={!isFaceUp}>
-                    {card.type === 'letter' ? <><span className="memory-card-kind">LETRA</span><strong>{card.letter}</strong></> : <SignPlaceholder letter={card.letter} />}
+                    {card.type === 'letter' ? <><span className="memory-card-kind">LETRA</span><strong>{card.letter}</strong></> : <img className="memory-sign-image" src={SIGN_IMAGES[card.letter]} alt="" />}
                   </span>
                   {matched.includes(card.letter) && <span className="memory-match-mark" aria-label="Par encontrado">✓</span>}
                 </button>
@@ -277,7 +270,6 @@ export function JogoMemoria() {
             {isOver && <button className="memory-secondary-button" type="button" onClick={() => setShowAlphabet(true)}>Aprender o alfabeto</button>}
             <Link to="/jogos" className="memory-secondary-button">Voltar ao início</Link>
           </div>
-          <p className="memory-source-note">Os sinais manuais precisam de imagens educativas validadas para que esta atividade ensine o alfabeto de Libras com precisão.</p>
         </section>
       )}
     </div>

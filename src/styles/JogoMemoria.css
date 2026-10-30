@@ -216,7 +216,6 @@
 }
 
 .memory-primary-button:hover { background: var(--memory-purple-dark); }
-.memory-source-note { margin-top: 14px; color: var(--memory-purple-dark); font-size: 0.88rem; }
 
 .memory-round-topline { margin-bottom: 14px; }
 .memory-back-link { color: var(--memory-purple-dark); font-weight: 600; text-decoration: none; }
@@ -292,10 +291,7 @@
 }
 
 .memory-card-front > strong { align-self: start; font-size: clamp(2rem, 4vw, 3rem); line-height: 1; }
-.memory-sign-placeholder { display: grid; width: 100%; height: 100%; align-content: center; justify-items: center; gap: 2px; }
-.memory-sign-label { color: #936c23; font-size: 0.62rem; font-weight: 700; }
-.memory-sign-letter { color: #18313b; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; line-height: 1; }
-.memory-sign-note { color: #536b70; font-size: 0.7rem; }
+.memory-sign-image { display: block; width: 100%; height: 100%; object-fit: contain; }
 .memory-match-mark { position: absolute; top: 4px; right: 7px; color: var(--memory-purple-dark); font-size: 1.1rem; font-weight: 700; }
 
 .memory-result {
@@ -328,10 +324,9 @@
 .memory-result-stats span { color: var(--memory-muted); font-size: 0.88rem; }
 .memory-result-stats strong { font-size: 1.1rem; }
 .memory-result-actions { justify-content: center; }
-.memory-result .memory-source-note { max-width: 650px; }
 
 .memory-learning { padding: 8px 0 28px; }
-.memory-learning-image { display: block; width: min(100%, 800px); height: auto; margin: 20px auto 0; border-radius: 8px; }
+.memory-learning-image { display: block; width: min(100%, 800px); height: auto; margin: 20px auto 0; border-radius: 8px; animation: memory-card-reveal 420ms ease-out both; }
 
 .memory-no-motion *,
 .memory-no-motion *::before,
@@ -378,8 +373,7 @@
   .memory-board-26 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .memory-card { aspect-ratio: 0.78; border-radius: 9px; }
   .memory-card-back { font-size: 1.8rem; }
-  .memory-card-kind, .memory-sign-label { font-size: 0.55rem; }
-  .memory-sign-note { font-size: 0.62rem; }
+  .memory-card-kind { font-size: 0.55rem; }
   .memory-match-mark { top: 1px; right: 4px; font-size: 0.9rem; }
   .memory-result { padding: 24px 14px; }
   .memory-result-stats { grid-template-columns: 1fr; }
@@ -397,5 +391,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .memory-game *, .memory-game *::before, .memory-game *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .memory-game *, .memory-game *::before, .memory-game *::after, .memory-learning-image { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
