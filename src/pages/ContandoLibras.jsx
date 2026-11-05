@@ -1,32 +1,61 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import imagemAbacaxi from '../../imagens/abacaxi.jpeg';
-import imagemBanana from '../../imagens/banana.jpeg';
-import imagemMaca from '../../imagens/maca.jpeg';
-import imagemMorango from '../../imagens/morango.jpeg';
+import imagemTresMorangos from '../../imagens/tresMorangos.jpeg';
+import imagemNumero7 from '../../imagens/numero7.jpeg';
+import imagemNumero3 from '../../imagens/numero3.jpeg';
+import imagemNumerosLibras from '../../imagens/numerosLibras.jpeg';
+import imagemNumero1 from '../../imagens/numero1.jpeg';
+import imagemNumero2 from '../../imagens/numero2.jpeg';
+import imagemNumero4 from '../../imagens/numero4.jpeg';
+import imagemNumero5 from '../../imagens/numero5.jpeg';
+import imagemNumero6 from '../../imagens/numero6.jpeg';
+import imagemNumero8 from '../../imagens/numero8.jpeg';
+import imagemNumero9 from '../../imagens/numero9.jpeg';
+import imagemNumero10 from '../../imagens/numero10.png';
+import imagemUmaMelancia from '../../imagens/umaMelancia.jpeg';
+import imagemDuasMacas from '../../imagens/duasMacas.jpeg';
+import imagemQuatroLaranjas from '../../imagens/quatroLaranjas.jpeg';
+import imagemCincoUvas from '../../imagens/cincoUvas.jpeg';
+import imagemSeisBananas from '../../imagens/seisBananas.jpeg';
+import imagemSeteAbacaxis from '../../imagens/seteAbacaxis.jpeg';
+import imagemOitoCocos from '../../imagens/oitoCocos.jpeg';
+import imagemNoveLimoes from '../../imagens/noveLimoes.jpeg';
+import imagemDezMamoes from '../../imagens/dezMamoes.jpeg';
 import '../styles/ContandoLibras.css';
 
 const FRUITS = [
-  { id: 'melancia', name: 'Melancia', image: null, color: '#f5b2a1' },
-  { id: 'maca', name: 'Maçã', image: imagemMaca, color: '#f4c7a8' },
-  { id: 'morango', name: 'Morango', image: imagemMorango, color: '#f2b8b0' },
-  { id: 'laranja', name: 'Laranja', image: null, color: '#ffd397' },
-  { id: 'uva', name: 'Uva', image: null, color: '#d8c6ec' },
-  { id: 'banana', name: 'Banana', image: imagemBanana, color: '#f4df91' },
-  { id: 'abacaxi', name: 'Abacaxi', image: imagemAbacaxi, color: '#dfcf8d' },
-  { id: 'coco', name: 'Coco', image: null, color: '#c7b5a5' },
-  { id: 'limao', name: 'Limão', image: null, color: '#d5e59d' },
-  { id: 'mamao', name: 'Mamão', image: null, color: '#f2bd89' },
+  { id: 'melancia', name: 'Melancia', image: imagemUmaMelancia, color: '#f5b2a1' },
+  { id: 'maca', name: 'Maçã', image: imagemDuasMacas, color: '#f4c7a8' },
+  { id: 'morango', name: 'Morango', image: imagemTresMorangos, color: '#f2b8b0' },
+  { id: 'laranja', name: 'Laranja', image: imagemQuatroLaranjas, color: '#ffd397' },
+  { id: 'uva', name: 'Uva', image: imagemCincoUvas, color: '#d8c6ec' },
+  { id: 'banana', name: 'Banana', image: imagemSeisBananas, color: '#f4df91' },
+  { id: 'abacaxi', name: 'Abacaxi', image: imagemSeteAbacaxis, color: '#dfcf8d' },
+  { id: 'coco', name: 'Coco', image: imagemOitoCocos, color: '#c7b5a5' },
+  { id: 'limao', name: 'Limão', image: imagemNoveLimoes, color: '#d5e59d' },
+  { id: 'mamao', name: 'Mamão', image: imagemDezMamoes, color: '#f2bd89' },
 ];
 
+const SIGN_IMAGES = [
+  imagemNumero1,
+  imagemNumero2,
+  imagemNumero3,
+  imagemNumero4,
+  imagemNumero5,
+  imagemNumero6,
+  imagemNumero7,
+  imagemNumero8,
+  imagemNumero9,
+  imagemNumero10,
+];
 const NUMBERS = Array.from({ length: 10 }, (_, index) => ({
   number: index + 1,
   fruit: FRUITS[index],
-  signImage: null,
+  signImage: SIGN_IMAGES[index],
 }));
 
 const PHASES = [NUMBERS.slice(0, 5), NUMBERS.slice(5)];
-const NUMBER_CHART_IMAGE = null;
+const NUMBER_CHART_IMAGE = imagemNumerosLibras;
 const ROUND_INSTRUCTION = 'Toque em um sinal e depois na quantidade de frutas correspondente.';
 
 function shuffle(items) {
@@ -53,23 +82,22 @@ function FruitQuantity({ item }) {
     <>
       <span className="counting-fruit-name">{item.fruit.name}</span>
       <span className="counting-fruit-quantity" aria-hidden="true">
-        {Array.from({ length: item.number }, (_, index) => (
-          item.fruit.image ? (
-            <img
-              className="counting-fruit-image"
-              key={`${item.number}-${index}`}
-              src={item.fruit.image}
-              alt=""
-              draggable="false"
-            />
-          ) : (
+        {item.fruit.image ? (
+          <img
+            className="counting-fruit-image"
+            src={item.fruit.image}
+            alt=""
+            draggable="false"
+          />
+        ) : (
+          Array.from({ length: item.number }, (_, index) => (
             <span
               className="counting-fruit-slot"
               key={`${item.number}-${index}`}
               style={{ '--fruit-slot-color': item.fruit.color }}
             />
-          )
-        ))}
+          ))
+        )}
       </span>
     </>
   );
@@ -272,7 +300,7 @@ export default function ContandoLibras() {
             <p className="counting-assets-note">Os sinais e algumas imagens de frutas aguardam os arquivos finais.</p>
           </div>
           <div className="counting-fruit-preview" aria-hidden="true">
-            {[imagemMaca, imagemMorango, imagemBanana, imagemAbacaxi].map((image, index) => (
+            {[imagemTresMorangos, imagemNumero7, imagemNumero3].map((image, index) => (
               <img src={image} alt="" key={image} className={`counting-preview-fruit counting-preview-fruit-${index + 1}`} />
             ))}
           </div>

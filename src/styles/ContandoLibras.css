@@ -49,7 +49,6 @@
 .counting-preview-fruit-1 { transform: rotate(-8deg); }
 .counting-preview-fruit-2 { transform: rotate(7deg); }
 .counting-preview-fruit-3 { transform: rotate(5deg); }
-.counting-preview-fruit-4 { transform: rotate(-6deg); }
 
 .counting-learning,
 .counting-round,
@@ -60,7 +59,7 @@
 .counting-chart-placeholder strong { font-size: 1.25rem; }
 .counting-chart-placeholder > span:last-child { color: #665c42; }
 .counting-chart-numbers { color: #25866b; font-size: 1.5rem; font-weight: 700; word-spacing: 4px; }
-.counting-number-chart { display: block; width: min(100%, 900px); max-height: 68vh; margin: 20px auto 0; object-fit: contain; animation: counting-enter 420ms ease-out both; }
+.counting-number-chart { display: block; width: min(100%, 900px); max-height: 68vh; margin: 20px auto 0; object-fit: contain; animation: counting-chart-reveal 650ms cubic-bezier(0.2, 0.75, 0.25, 1) both; }
 
 .counting-round-header { align-items: flex-end; margin-bottom: 16px; }
 .counting-round-header h1 { font-size: 2rem; }
@@ -87,8 +86,8 @@
 .counting-sign-image { display: block; width: 100%; height: 92px; object-fit: contain; }
 .counting-fruit-choice { flex-direction: column; gap: 4px; }
 .counting-fruit-name { font-size: 0.86rem; font-weight: 700; line-height: 1.15; }
-.counting-fruit-quantity { width: min(100%, 230px); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); justify-items: center; gap: 2px; }
-.counting-fruit-image,
+.counting-fruit-quantity { width: min(100%, 230px); min-height: 72px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2px; }
+.counting-fruit-image { width: min(100%, 180px); height: 72px; object-fit: contain; }
 .counting-fruit-slot { width: 28px; height: 28px; object-fit: contain; }
 .counting-fruit-image { filter: drop-shadow(0 1px 1px #463c2522); }
 .counting-fruit-slot { border: 1px dashed var(--fruit-slot-color); border-radius: 7px; background: color-mix(in srgb, var(--fruit-slot-color) 20%, white); }
@@ -115,6 +114,7 @@
 .counting-result-actions { justify-content: center; flex-wrap: wrap; margin-top: 20px; }
 
 @keyframes counting-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes counting-chart-reveal { from { opacity: 0; transform: translateY(14px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
 @keyframes counting-pop { 50% { transform: scale(1.04); } }
 @keyframes counting-line-in { from { opacity: 0; } to { opacity: 0.82; } }
 @keyframes counting-shake { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
@@ -141,8 +141,8 @@
   .counting-sign-placeholder { min-height: 76px; }
   .counting-sign-image { height: 90px; }
   .counting-fruit-name { font-size: 0.76rem; }
-  .counting-fruit-quantity { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; }
-  .counting-fruit-image,
+  .counting-fruit-quantity { min-height: 72px; gap: 1px; }
+  .counting-fruit-image { width: min(100%, 150px); height: 68px; }
   .counting-fruit-slot { width: 22px; height: 22px; }
   .counting-chart-placeholder { min-height: 240px; padding: 16px; }
   .counting-chart-numbers { font-size: 1rem; word-spacing: 1px; }

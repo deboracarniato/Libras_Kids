@@ -6,8 +6,8 @@ export default function Materiais() {
     {
       id: 1,
       title: 'Asquelzinho e Debinha: Uma Viagem Pelo Mundo da Libras',
-      description: 'Uma apostila completa com as lições iniciais de alfabeto, cores e números para professores apresentarem o mundo da Libras para as crianças!',
-      category: 'Iniciante',
+      description: 'Uma apostila completa com as lições iniciais de alfabeto e números para professores apresentarem o mundo da Libras para as crianças!',
+      category: 'Atividades',
       type: 'Apostila',
       link: '#'
     },
