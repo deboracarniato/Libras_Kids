@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import imagemContandoLibras from '../../imagens/banana.jpeg';
+import imagemEstoureBaloes from '../../imagens/EstoureOsBaloes.png';
 import '../styles/Jogos.css';
 
 export default function Jogos() {
@@ -24,9 +24,9 @@ export default function Jogos() {
     },
     {
       id: 'arraste-e-solte',
-      title: 'Arraste e Solte: Animais',
-      description: 'Arraste o animal para a sua casinha sinalizada em Libras.',
-      imageUrl: 'https://placehold.co/300x200/A29BFE/FFF?text=Arraste',
+      title: 'Estoure os balões!',
+      description: 'Estoure os balões com o número em Libras correspondente!',
+      imageUrl: imagemEstoureBaloes,
     }
   ];
 
