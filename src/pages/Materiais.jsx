@@ -9,7 +9,7 @@ export default function Materiais() {
       description: 'Uma apostila completa com as lições iniciais de alfabeto e números para professores apresentarem o mundo da Libras para as crianças!',
       category: 'Atividades',
       type: 'Apostila',
-      link: '#'
+      link: 'https://heyzine.com/flip-book/2e2ebbe735.html'
     },
     {
       id: 2,
@@ -63,7 +63,12 @@ export default function Materiais() {
             <h3>{mat.title}</h3>
             <p className="material-category"><strong>Categoria:</strong> {mat.category}</p>
             <p className="material-desc">{mat.description}</p>
-            <a href={mat.link} className="btn-baixar" onClick={(e) => { e.preventDefault(); alert('Iniciando download fictício do material!'); }}>
+            <a href={mat.link} className="btn-baixar" onClick={(e) => {
+              if (mat.link === '#') {
+                e.preventDefault();
+                alert('Iniciando download fictício do material!');
+              }
+            }}>
               📥 Baixar PDF
             </a>
           </div>
