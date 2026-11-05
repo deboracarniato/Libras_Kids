@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
 import imagemInicial from '../../imagens/foto_tela_inicial_jpeg.jpeg';
+import logoLibrasKids from '../../imagens/logo.libraskids.jpeg';
+import imagemAsquelzinho from '../../imagens/asquelzinho1.jpg';
+import imagemDebinha from '../../imagens/debinha1.jpg';
 import '../styles/Home.css';
 
 export default function Home() {
   const jogos = [
     { id: 'jogo-da-memoria', title: 'Jogo da Memória', subtitle: 'Alfabeto em Libras', color: '#EBE4FF', icon: '🎴' },
     { id: 'quiz-de-sinais', title: 'Quiz Libras', subtitle: 'Teste seus conhecimentos!', color: '#D3F9D8', icon: '❓' },
-    { id: 'ligue-corretamente', title: 'Contando com Libras', subtitle: 'Associe sinais e quantidades', color: '#FFF3C4', icon: '🔗' },
-    { id: 'arraste-e-solte', title: 'Arraste e Solte', subtitle: 'Monte a palavra em Libras', color: '#D6E4FF', icon: '👆' },
+    { id: 'ligue-corretamente', title: 'Ligue Corretamente', subtitle: 'Associe sinais e quantidades', color: '#FFF3C4', icon: '🔗' },
+    { id: 'arraste-e-solte', title: 'Estoure os balões!', subtitle: 'Estoure os balões com números em Libras', color: '#D6E4FF', icon: '🎈' },
   ];
 
   return (
@@ -77,6 +80,10 @@ export default function Home() {
               </ul>
             </div>
           </div>
+          <div className="teacher-characters" role="group" aria-label="Personagens Asquelzinho e Débinha">
+            <img className="teacher-character-image" src={imagemAsquelzinho} alt="Asquelzinho" />
+            <img className="teacher-character-image" src={imagemDebinha} alt="Débinha" />
+          </div>
         </div>
 
         <div className="dashboard-right">
@@ -85,7 +92,7 @@ export default function Home() {
             <Link to="/materiais" className="link-all">Ver todos →</Link>
           </div>
           <div className="materials-big-card">
-            <img src="https://placehold.co/300x200/f0f0f0/888?text=Apostilas+e+Cartas" alt="Preview de apostilas" className="materials-img" />
+            <img src={logoLibrasKids} alt="Logo do LibrasKids" className="materials-img" />
             <p>Baixe atividades, cartas, jogos e apostilas para usar onde quiser!</p>
             <Link to="/materiais" className="btn btn-materials">📥 Acessar materiais para imprimir</Link>
           </div>

@@ -280,6 +280,27 @@
   font-weight: 600;
 }
 
+.teacher-characters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 5vw, 2.5rem);
+  margin: 1.5rem auto 0;
+}
+
+.teacher-character-image {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  animation: materials-logo-float 3.2s ease-in-out infinite;
+}
+
+.teacher-character-image:nth-child(2) {
+  animation-delay: -1.6s;
+}
+
 /* Materiais Lateral */
 .materials-big-card {
   background-color: #E6FFFA;
@@ -294,11 +315,18 @@
 }
 
 .materials-img {
-  width: 100%;
+  width: 70%;
   max-width: 250px;
   border-radius: 15px;
   margin-bottom: 2rem;
   box-shadow: var(--shadow-sm);
+  animation: materials-logo-float 3.2s ease-in-out infinite;
+  transition: transform 220ms ease;
+}
+
+.materials-big-card:hover .materials-img {
+  animation-play-state: paused;
+  transform: translateY(-5px) scale(1.04) rotate(-1deg);
 }
 
 .materials-big-card p {
@@ -323,6 +351,17 @@
 .btn-materials:active {
   transform: translateY(4px);
   box-shadow: 0 0 0 transparent;
+}
+
+@keyframes materials-logo-float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .materials-img { animation: none; }
+  .teacher-character-image { animation: none; }
+  .materials-big-card:hover .materials-img { transform: none; }
 }
 
 /* Responsivo */
@@ -353,6 +392,10 @@
 @media (max-width: 768px) {
   .jogos-mini-grid {
     grid-template-columns: 1fr;
+  }
+  .teacher-character-image {
+    width: min(42%, 150px);
+    height: 180px;
   }
   .hero-buttons {
     flex-direction: column;

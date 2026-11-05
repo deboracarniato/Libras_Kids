@@ -1,4 +1,4 @@
-import React from 'react';
+import logoBarbosa from '../../imagens/Logo.barbosa.png';
 import '../styles/Footer.css';
 
 export default function Footer() {
@@ -16,7 +16,7 @@ export default function Footer() {
             <p>Feito com amor pelos alunos Debora e Matheus!</p>
           </div>
           <div className="footer-col">
-            <div className="col-icon">👨‍👩‍👧‍👦</div>
+            <img className="col-icon col-icon-image" src={logoBarbosa} alt="Logo do Colégio Barbosa Ferraz" />
             <p>Conteúdos criados por estudantes do Colégio Barbosa Ferraz para apresentar o mundo da Libras para crianças.</p>
           </div>
           <div className="footer-col">

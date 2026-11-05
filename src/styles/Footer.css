@@ -54,6 +54,13 @@
   font-size: 2rem;
 }
 
+.col-icon-image {
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  object-fit: contain;
+}
+
 .footer-col p {
   font-size: 0.9rem;
   line-height: 1.4;

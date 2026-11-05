@@ -291,7 +291,7 @@ export default function ContandoLibras() {
         <section className="counting-start" aria-labelledby="counting-title">
           <div className="counting-start-copy">
             <p className="counting-eyebrow">Jogo de associação</p>
-            <h1 id="counting-title">Contando <span>com Libras</span></h1>
+            <h1 id="counting-title">Ligue Corretamente</h1>
             <p>Relacione cada sinal à quantidade certa de frutas.</p>
             <div className="counting-start-actions">
               <button className="counting-primary-button" type="button" onClick={startGame}>COMEÇAR JOGO</button>
