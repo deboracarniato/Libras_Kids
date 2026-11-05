@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import imagemJogoMemoria from '../../imagens/JogoDaMemoria.png';
+import imagemQuizSinais from '../../imagens/quizDeSinais.jpeg';
+import imagemJogoDeLigue from '../../imagens/JogoDeLigue.png';
 import imagemEstoureBaloes from '../../imagens/EstoureOsBaloes.png';
 import '../styles/Jogos.css';
 
@@ -8,19 +11,19 @@ export default function Jogos() {
       id: 'jogo-da-memoria',
       title: 'Jogo da Memória: Alfabeto',
       description: 'Encontre os pares entre a letra do alfabeto e o sinal correspondente em Libras!',
-      imageUrl: 'https://placehold.co/300x200/FF6B6B/FFF?text=Mem%C3%B3ria',
+      imageUrl: imagemJogoMemoria,
     },
     {
       id: 'quiz-de-sinais',
       title: 'Quiz de Sinais',
       description: 'Descubra qual palavra corresponde à sequência de letras e teste seus conhecimentos!',
-      imageUrl: 'https://placehold.co/300x200/4ECDC4/FFF?text=Quiz',
+      imageUrl: imagemQuizSinais,
     },
     {
       id: 'ligue-corretamente',
       title: 'Ligue Corretamente',
       description: 'Ligue a quantidade de frutas ao seu número. Seja rápido!',
-      imageUrl: 'https://placehold.co/300x200/FFE66D/2F3542?text=Ligue',
+      imageUrl: imagemJogoDeLigue,
     },
     {
       id: 'arraste-e-solte',
