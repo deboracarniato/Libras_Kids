@@ -3,16 +3,6 @@ import imagemInicial from '../../imagens/foto_tela_inicial_jpeg.jpeg';
 import '../styles/Home.css';
 
 export default function Home() {
-  const categorias = [
-    { id: 1, nome: 'Alfabeto em Libras', icon: 'A B C', color: 'var(--cat-blue)', img: 'https://placehold.co/150x120/A29BFE/FFF?text=Alfabeto' },
-    { id: 2, nome: 'Números em Libras', icon: '1 2 3', color: 'var(--cat-yellow)', img: 'https://placehold.co/150x120/FFE66D/FFF?text=Números' },
-    { id: 3, nome: 'Cores', icon: '🌈', color: 'var(--cat-pink)', img: 'https://placehold.co/150x120/FD79A8/FFF?text=Cores' },
-    { id: 4, nome: 'Animais', icon: '🦁', color: 'var(--cat-green)', img: 'https://placehold.co/150x120/00b894/FFF?text=Animais' },
-    { id: 5, nome: 'Família', icon: '👨‍👩‍👧‍👦', color: 'var(--cat-orange)', img: 'https://placehold.co/150x120/e17055/FFF?text=Família' },
-    { id: 6, nome: 'Escola', icon: '🎒', color: 'var(--cat-purple)', img: 'https://placehold.co/150x120/6c5ce7/FFF?text=Escola' },
-    { id: 7, nome: 'Sentimentos', icon: '❤️', color: 'var(--cat-red)', img: 'https://placehold.co/150x120/ff7675/FFF?text=Sentimentos' },
-  ];
-
   const jogos = [
     { id: 'jogo-da-memoria', title: 'Jogo da Memória', subtitle: 'Alfabeto em Libras', color: '#EBE4FF', icon: '🎴' },
     { id: 'quiz-de-sinais', title: 'Quiz Libras', subtitle: 'Teste seus conhecimentos!', color: '#D3F9D8', icon: '❓' },
@@ -28,7 +18,6 @@ export default function Home() {
           <p>Jogos, atividades e materiais para aprender Libras brincando.</p>
           <div className="hero-buttons">
             <Link to="/jogos" className="btn btn-primary-big">🎮 Jogar agora</Link>
-            <Link to="/biblioteca" className="btn btn-outline">Explorar biblioteca</Link>
           </div>
         </div>
         
@@ -47,24 +36,6 @@ export default function Home() {
               <li><span className="icon">👨‍🏫</span> Dicas para professores</li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <section className="categories-section">
-        <div className="section-header">
-          <h3>Explore por temas</h3>
-        </div>
-        <div className="categories-grid-horizontal">
-          {categorias.map(cat => (
-            <div key={cat.id} className="cat-card" style={{ backgroundColor: cat.color }}>
-              <div className="cat-content">
-                <h4>{cat.nome}</h4>
-                <div className="cat-icon">{cat.icon}</div>
-              </div>
-              <img src={cat.img} alt={cat.nome} className="cat-img" />
-              <Link to="/biblioteca" className="cat-link">Ver conteúdos →</Link>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -121,33 +92,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="how-to-learn-section">
-        <div className="section-header text-center">
-          <h3>Como você quer aprender hoje?</h3>
-        </div>
-        <div className="learn-cards-grid">
-          <Link to="/jogos" className="learn-card">
-            <div className="learn-icon">🎮</div>
-            <h4>Jogos Interativos</h4>
-            <p>Aprenda brincando</p>
-          </Link>
-          <Link to="/biblioteca" className="learn-card">
-            <div className="learn-icon">📚</div>
-            <h4>Biblioteca</h4>
-            <p>Explore sinais por tema</p>
-          </Link>
-          <Link to="/materiais" className="learn-card">
-            <div className="learn-icon">🖨️</div>
-            <h4>Materiais</h4>
-            <p>Baixe para imprimir</p>
-          </Link>
-          <Link to="/biblioteca" className="learn-card">
-            <div className="learn-icon">🎥</div>
-            <h4>Vídeos</h4>
-            <p>Aprenda sinais em Libras</p>
-          </Link>
-        </div>
-      </section>
     </>
   );
 }

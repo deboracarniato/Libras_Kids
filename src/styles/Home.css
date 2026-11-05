@@ -140,7 +140,6 @@
   color: #4A5568;
 }
 
-/* Explore por temas */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -158,73 +157,6 @@
 .link-all {
   color: var(--primary);
   font-weight: 600;
-  text-decoration: none;
-}
-
-.categories-section {
-  margin-bottom: 4rem;
-}
-
-.categories-grid-horizontal {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  padding-bottom: 1.5rem;
-}
-
-.categories-grid-horizontal::-webkit-scrollbar {
-  height: 8px;
-}
-.categories-grid-horizontal::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 4px;
-}
-
-.cat-card {
-  flex: 0 0 200px;
-  border-radius: 25px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-}
-
-.cat-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-md);
-}
-
-.cat-content h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: var(--text);
-}
-
-.cat-icon {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.cat-img {
-  width: 100px;
-  height: 100px;
-  align-self: center;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.cat-link {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: rgba(0,0,0,0.6);
   text-decoration: none;
 }
 
@@ -393,53 +325,6 @@
   box-shadow: 0 0 0 transparent;
 }
 
-/* Nova Seção */
-.how-to-learn-section {
-  margin-bottom: 4rem;
-}
-
-.text-center {
-  justify-content: center;
-}
-
-.learn-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.learn-card {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 30px;
-  text-align: center;
-  text-decoration: none;
-  color: var(--text);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 2px solid transparent;
-}
-
-.learn-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary);
-}
-
-.learn-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-.learn-card h4 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.learn-card p {
-  color: #888;
-}
-
 /* Responsivo */
 @media (max-width: 1024px) {
   .hero-section {
@@ -466,9 +351,6 @@
 }
 
 @media (max-width: 768px) {
-  .learn-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .jogos-mini-grid {
     grid-template-columns: 1fr;
   }

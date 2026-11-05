@@ -3,8 +3,6 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Biblioteca from './pages/Biblioteca';
-import ContentDetails from './pages/ContentDetails';
 import Jogos from './pages/Jogos';
 import JogoPlaceholder, { JogoMemoria } from './pages/JogoPlaceholder';
 import EstoureBaloes from './pages/EstoureBaloes';
@@ -22,8 +20,6 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/biblioteca" element={<Biblioteca />} />
-            <Route path="/biblioteca/:id" element={<ContentDetails />} />
             <Route path="/jogos" element={<Jogos />} />
             <Route path="/jogos/jogo-da-memoria" element={<JogoMemoria />} />
             <Route path="/jogos/quiz-de-sinais" element={<QuizDatilologia />} />
