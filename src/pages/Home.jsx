@@ -36,33 +36,6 @@ export default function Home() {
 
   return (
     <>
-      <section className="brand-intro" aria-labelledby="brand-intro-title">
-        <p className="brand-intro-eyebrow">Nosso nome em Libras</p>
-        <div className="brand-signs" role="group" aria-label="Sinais que formam Libras Kids">
-          {brandSigns.map(({ letter, image }, index) => (
-            <div className="brand-sign-card" key={`${letter}-${index}`} style={{ '--sign-delay': `${index * 110}ms` }}>
-              <img src={image} alt={`Sinal da letra ${letter} em Libras`} />
-            </div>
-          ))}
-        </div>
-        <h2 className="brand-intro-title" id="brand-intro-title" aria-label="Libras Kids">
-          <span className="brand-title-word">
-            {'LIBRAS'.split('').map((letter, index) => (
-              <span className="brand-title-letter" key={letter} style={{ '--title-delay': `calc(1.45s + ${index * 95}ms)` }} aria-hidden="true">
-                {letter}
-              </span>
-            ))}
-          </span>
-          <span className="brand-title-word">
-            {'KIDS'.split('').map((letter, index) => (
-              <span className="brand-title-letter" key={letter} style={{ '--title-delay': `calc(1.45s + ${(index + 6) * 95}ms)` }} aria-hidden="true">
-                {letter}
-              </span>
-            ))}
-          </span>
-        </h2>
-      </section>
-
       <section className="hero-section">
         <div className="hero-left">
           <h2>Aprender Libras é divertido!</h2>
@@ -127,10 +100,6 @@ export default function Home() {
                 <li>💡 Dicas práticas para aplicar</li>
               </ul>
             </div>
-          </div>
-          <div className="teacher-characters" role="group" aria-label="Personagens Asquelzinho e Débinha">
-            <img className="teacher-character-image" src={imagemAsquelzinho} alt="Asquelzinho" />
-            <img className="teacher-character-image" src={imagemDebinha} alt="Débinha" />
           </div>
         </div>
 
