@@ -45,10 +45,10 @@
 .counting-secondary-button:hover { transform: translateY(-2px); background: #fff6d8; }
 .counting-assets-note { margin-top: 17px; color: #675a37; font-size: 0.88rem; }
 .counting-fruit-preview { display: grid; width: min(100%, 380px); grid-template-columns: repeat(2, 1fr); justify-items: center; gap: 6px 12px; margin: auto; }
-.counting-preview-fruit { width: 125px; height: 125px; object-fit: contain; filter: drop-shadow(0 5px 3px #57441c25); }
-.counting-preview-fruit-1 { transform: rotate(-8deg); }
-.counting-preview-fruit-2 { transform: rotate(7deg); }
-.counting-preview-fruit-3 { transform: rotate(5deg); }
+.counting-preview-fruit { width: 125px; height: 125px; object-fit: contain; filter: drop-shadow(0 5px 3px #57441c25); animation: counting-preview-float 2.8s ease-in-out infinite; }
+.counting-preview-fruit-1 { transform: rotate(-8deg); animation-delay: -0.5s; }
+.counting-preview-fruit-2 { transform: rotate(7deg); animation-delay: -1.2s; }
+.counting-preview-fruit-3 { transform: rotate(5deg); animation-delay: -1.9s; }
 
 .counting-learning,
 .counting-round,
@@ -119,6 +119,7 @@
 @keyframes counting-line-in { from { opacity: 0; } to { opacity: 0.82; } }
 @keyframes counting-shake { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
 @keyframes counting-star { to { transform: rotate(10deg) scale(1.08); } }
+@keyframes counting-preview-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
 
 @media (max-width: 700px) {
   .counting-game { padding: 14px 14px 28px; border-radius: 13px; }
@@ -158,4 +159,5 @@
   .counting-game *,
   .counting-game *::before,
   .counting-game *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .counting-preview-fruit { animation: none; }
 }
