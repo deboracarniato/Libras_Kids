@@ -1,16 +1,7 @@
 import { Link } from 'react-router-dom';
 import imagemInicial from '../../imagens/foto_tela_inicial_jpeg.jpeg';
 import logoLibrasKids from '../../imagens/logo.libraskids.jpeg';
-import imagemAsquelzinho from '../../imagens/asquelzinho1.jpg';
-import imagemDebinha from '../../imagens/debinha1.jpg';
-import letraL from '../../imagens/letraL.jpeg';
-import letraI from '../../imagens/letraI.jpeg';
-import letraB from '../../imagens/letraB.jpeg';
-import letraR from '../../imagens/letraR.jpeg';
-import letraA from '../../imagens/letraA.jpeg';
-import letraS from '../../imagens/letraS.jpeg';
-import letraK from '../../imagens/letraK.jpeg';
-import letraD from '../../imagens/letraD.jpeg';
+
 import '../styles/Home.css';
 
 const brandSigns = [

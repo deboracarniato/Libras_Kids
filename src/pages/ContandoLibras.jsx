@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import imagemTresMorangos from '../../imagens/tresMorangos.jpeg';
 import imagemNumero7 from '../../imagens/numero7.jpeg';
 import imagemNumero3 from '../../imagens/numero3.jpeg';
+import imagemTresMorangosPreview from '../../imagens/tresMorangos-transparent.png';
+import imagemNumero7Preview from '../../imagens/numero7-transparent.png';
+import imagemNumero3Preview from '../../imagens/numero3-transparent.png';
 import imagemNumerosLibras from '../../imagens/numerosLibras.jpeg';
 import imagemNumero1 from '../../imagens/numero1.jpeg';
 import imagemNumero2 from '../../imagens/numero2.jpeg';
@@ -300,7 +303,7 @@ export default function ContandoLibras() {
             <p className="counting-assets-note">Os sinais e algumas imagens de frutas aguardam os arquivos finais.</p>
           </div>
           <div className="counting-fruit-preview" aria-hidden="true">
-            {[imagemTresMorangos, imagemNumero7, imagemNumero3].map((image, index) => (
+            {[imagemTresMorangosPreview, imagemNumero7Preview, imagemNumero3Preview].map((image, index) => (
               <img src={image} alt="" key={image} className={`counting-preview-fruit counting-preview-fruit-${index + 1}`} />
             ))}
           </div>

@@ -604,11 +604,7 @@
   .brand-sign-card, .brand-title-letter { animation: none; }
   .hero-child-img { animation: none; }
   .materials-img { animation: none; }
-  .brand-intro-character {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
+
   .materials-big-card:hover .materials-img { transform: none; }
   .brand-sign,
   .brand-intro-word > span {

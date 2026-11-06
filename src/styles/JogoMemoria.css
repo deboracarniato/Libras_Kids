@@ -291,7 +291,7 @@
 }
 
 .memory-card-front > strong { align-self: start; font-size: clamp(2rem, 4vw, 3rem); line-height: 1; }
-.memory-sign-image { display: block; width: 100%; height: 100%; object-fit: contain; }
+.memory-sign-image { display: block; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
 .memory-match-mark { position: absolute; top: 4px; right: 7px; color: var(--memory-purple-dark); font-size: 1.1rem; font-weight: 700; }
 
 .memory-result {
