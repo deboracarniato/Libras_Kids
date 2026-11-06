@@ -1,7 +1,21 @@
 import { Link } from 'react-router-dom';
 import imagemInicial from '../../imagens/foto_tela_inicial_jpeg.jpeg';
 import logoLibrasKids from '../../imagens/logo.libraskids.jpeg';
+
 import '../styles/Home.css';
+
+const brandSigns = [
+  { letter: 'L', image: letraL },
+  { letter: 'I', image: letraI },
+  { letter: 'B', image: letraB },
+  { letter: 'R', image: letraR },
+  { letter: 'A', image: letraA },
+  { letter: 'S', image: letraS },
+  { letter: 'K', image: letraK },
+  { letter: 'I', image: letraI },
+  { letter: 'D', image: letraD },
+  { letter: 'S', image: letraS },
+];
 
 export default function Home() {
   const jogos = [
