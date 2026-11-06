@@ -1,9 +1,110 @@
+/* Apresentação da marca */
+.brand-intro {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1.75rem clamp(1rem, 3vw, 2.5rem);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 32px;
+  background: linear-gradient(135deg, #fff 0%, #fff8e7 70%, #e6fffa 100%);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.brand-intro-eyebrow {
+  color: #2c7a7b;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-signs {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(0.35rem, 1.2vw, 1rem);
+  width: 100%;
+}
+
+.brand-sign-card {
+  width: min(100%, 96px);
+  aspect-ratio: 1;
+  justify-self: center;
+  overflow: hidden;
+  padding: 0.3rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 5px 14px rgba(47, 53, 66, 0.08);
+  animation: brand-sign-arrive 650ms cubic-bezier(0.2, 0.8, 0.2, 1) var(--sign-delay) both;
+}
+
+.brand-sign-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.brand-intro-title {
+  display: flex;
+  justify-content: center;
+  gap: 0.28em;
+  color: var(--primary);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.brand-title-word {
+  display: inline-flex;
+  gap: 0.025em;
+}
+
+.brand-title-letter {
+  display: inline-block;
+  animation: brand-letter-reveal 450ms cubic-bezier(0.2, 0.8, 0.2, 1) var(--title-delay) both;
+}
+
+.brand-title-letter:nth-child(3n + 2) {
+  color: var(--secondary);
+}
+
+@keyframes brand-sign-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.78) rotate(-6deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+  }
+}
+
+@keyframes brand-letter-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.78);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 /* Hero Section */
 .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #FFF8E7 0%, #F5F7FA 100%);
+  background: #ffffc5;
   padding: 4rem;
   border-radius: 40px;
   margin-bottom: 4rem;
@@ -88,8 +189,14 @@
   border: 8px solid white;
   box-shadow: var(--shadow-lg);
   transform: rotate(-2deg);
+  animation: hero-image-float 4s ease-in-out infinite;
   position: relative;
   z-index: 1;
+}
+
+@keyframes hero-image-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -6px; }
 }
 
 .speech-bubble {
@@ -359,6 +466,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .brand-sign-card, .brand-title-letter { animation: none; }
+  .hero-child-img { animation: none; }
   .materials-img { animation: none; }
   .teacher-character-image { animation: none; }
   .materials-big-card:hover .materials-img { transform: none; }
@@ -390,6 +499,22 @@
 }
 
 @media (max-width: 768px) {
+  .brand-signs {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    max-width: 420px;
+    row-gap: 0.55rem;
+  }
+  .brand-sign-card {
+    width: min(100%, 76px);
+    border-radius: 16px;
+  }
+  .brand-intro {
+    gap: 1rem;
+    padding-block: 1.4rem;
+  }
+  .brand-intro-title {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
   .jogos-mini-grid {
     grid-template-columns: 1fr;
   }

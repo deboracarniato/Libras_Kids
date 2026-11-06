@@ -3,7 +3,28 @@ import imagemInicial from '../../imagens/foto_tela_inicial_jpeg.jpeg';
 import logoLibrasKids from '../../imagens/logo.libraskids.jpeg';
 import imagemAsquelzinho from '../../imagens/asquelzinho1.jpg';
 import imagemDebinha from '../../imagens/debinha1.jpg';
+import letraL from '../../imagens/letraL.jpeg';
+import letraI from '../../imagens/letraI.jpeg';
+import letraB from '../../imagens/letraB.jpeg';
+import letraR from '../../imagens/letraR.jpeg';
+import letraA from '../../imagens/letraA.jpeg';
+import letraS from '../../imagens/letraS.jpeg';
+import letraK from '../../imagens/letraK.jpeg';
+import letraD from '../../imagens/letraD.jpeg';
 import '../styles/Home.css';
+
+const brandSigns = [
+  { letter: 'L', image: letraL },
+  { letter: 'I', image: letraI },
+  { letter: 'B', image: letraB },
+  { letter: 'R', image: letraR },
+  { letter: 'A', image: letraA },
+  { letter: 'S', image: letraS },
+  { letter: 'K', image: letraK },
+  { letter: 'I', image: letraI },
+  { letter: 'D', image: letraD },
+  { letter: 'S', image: letraS },
+];
 
 export default function Home() {
   const jogos = [
@@ -15,6 +36,33 @@ export default function Home() {
 
   return (
     <>
+      <section className="brand-intro" aria-labelledby="brand-intro-title">
+        <p className="brand-intro-eyebrow">Nosso nome em Libras</p>
+        <div className="brand-signs" role="group" aria-label="Sinais que formam Libras Kids">
+          {brandSigns.map(({ letter, image }, index) => (
+            <div className="brand-sign-card" key={`${letter}-${index}`} style={{ '--sign-delay': `${index * 110}ms` }}>
+              <img src={image} alt={`Sinal da letra ${letter} em Libras`} />
+            </div>
+          ))}
+        </div>
+        <h2 className="brand-intro-title" id="brand-intro-title" aria-label="Libras Kids">
+          <span className="brand-title-word">
+            {'LIBRAS'.split('').map((letter, index) => (
+              <span className="brand-title-letter" key={letter} style={{ '--title-delay': `calc(1.45s + ${index * 95}ms)` }} aria-hidden="true">
+                {letter}
+              </span>
+            ))}
+          </span>
+          <span className="brand-title-word">
+            {'KIDS'.split('').map((letter, index) => (
+              <span className="brand-title-letter" key={letter} style={{ '--title-delay': `calc(1.45s + ${(index + 6) * 95}ms)` }} aria-hidden="true">
+                {letter}
+              </span>
+            ))}
+          </span>
+        </h2>
+      </section>
+
       <section className="hero-section">
         <div className="hero-left">
           <h2>Aprender Libras é divertido!</h2>
