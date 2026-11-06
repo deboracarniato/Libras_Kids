@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import imagemInicial from '../../imagens/foto_tela_inicial_jpeg.jpeg';
 import logoLibrasKids from '../../imagens/logo.libraskids.jpeg';
-import imagemAsquelzinho from '../../imagens/asquelzinho1.jpg';
-import imagemDebinha from '../../imagens/debinha1.jpg';
 import '../styles/Home.css';
 
 export default function Home() {
@@ -79,10 +77,6 @@ export default function Home() {
                 <li>💡 Dicas práticas para aplicar</li>
               </ul>
             </div>
-          </div>
-          <div className="teacher-characters" role="group" aria-label="Personagens Asquelzinho e Débinha">
-            <img className="teacher-character-image" src={imagemAsquelzinho} alt="Asquelzinho" />
-            <img className="teacher-character-image" src={imagemDebinha} alt="Débinha" />
           </div>
         </div>
 
